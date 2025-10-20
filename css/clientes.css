@@ -1,0 +1,153 @@
+/* css/clientes.css */
+/* Estilos específicos para la página de Gestión de Clientes */
+
+/* Título de la sección */
+.main-content h2 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 25px;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Grid para los campos del formulario */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+    font-family: var(--font-principal);
+}
+
+/* Botones del formulario */
+.form-actions button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-actions button:hover {
+    border-color: var(--color-principal);
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    border-color: var(--color-principal);
+}
+
+.btn-primary:hover {
+    background-color: #061a30;
+    border-color: #061a30;
+}
+
+/* Línea separadora */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar select, .search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-principal);
+}
+
+.search-bar input {
+    flex-grow: 1; /* El campo de texto ocupa el espacio restante */
+}
+
+/* Estilos de la tabla de clientes */
+.client-table-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow-x: auto; /* Para que la tabla sea responsive en pantallas pequeñas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones de acción en la tabla */
+.actions-cell {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.edit-btn { color: #3498db; }
+.delete-btn { color: #e74c3c; }
+
+/* Estilo para el enlace activo en el menú lateral */
+.main-nav ul li a.active {
+    background-color: #061a30;
+    font-weight: bold;
+}

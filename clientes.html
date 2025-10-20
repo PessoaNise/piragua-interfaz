@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Piragua - Gestión de Clientes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/2.css"> <link rel="stylesheet" href="Css/clientes.css"> </head>
+<body>
+    
+    <div class="dashboard-container">
+        <header class="main-header">
+            <h1><a href="2.html">Hotel Piragua - Dashboard</a></h1>
+            <div class="user-info">
+                <span>Usuario: Desconocido</span>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="clientes.html"><i class="fas fa-users"></i> Clientes</a></li>
+            <li><a href="reservas.html"><i class="fas fa-calendar-check"></i> Reservas</a></li>
+            <li><a href="habitaciones.html"><i class="fas fa-bed"></i> Habitaciones</a></li>
+        </ul>
+    </nav>
+</aside>
+
+        <main class="main-content">
+            <h2>Gestión de Clientes</h2>
+            
+            <div class="content-box">
+                <form id="client-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn">Eliminar</button>
+                        <button type="reset" class="btn">Limpiar</button>
+                        <button type="button" class="btn">Editar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="content-box">
+                <div class="search-bar">
+                    <select name="search-filter">
+                        <option value="nombre">Buscar por Nombre</option>
+                        <option value="apellido">Buscar por Apellido</option>
+                        <option value="correo">Buscar por Correo</option>
+                    </select>
+                    <input type="text" placeholder="Término de búsqueda...">
+                    <button type="button" class="btn btn-primary">Buscar</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan.perez@email.com</td>
+                                <td>55-1234-5678</td>
+                                <td class="actions-cell">
+                                    <button class="action-btn edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria</td>
+                                <td>García</td>
+                                <td>maria.garcia@email.com</td>
+                                <td>55-8765-4321</td>
+                                <td class="actions-cell">
+                                    <button class="action-btn edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Piragua - Habitaciones</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/2.css"> <link rel="stylesheet" href="Css/habitaciones.css"> </head>
+<body>
+    
+    <div class="dashboard-container">
+        <header class="main-header">
+            <h1><a href="2.html">Hotel Piragua - Dashboard</a></h1>
+            <div class="user-info">
+                <span>Usuario: Desconocido</span>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="clientes.html"><i class="fas fa-users"></i> Clientes</a></li>
+                    <li><a href="reservas.html"><i class="fas fa-calendar-check"></i> Reservas</a></li>
+                    <li><a href="habitaciones.html" class="active"><i class="fas fa-bed"></i> Habitaciones</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h2>Habitaciones</h2>
+            
+            <div class="content-box">
+                <form class="room-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="id_habitacion">ID Habitación:</label>
+                            <input type="text" id="id_habitacion" name="id_habitacion" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero">Número:</label>
+                            <input type="text" id="numero" name="numero">
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo:</label>
+                            <select id="tipo" name="tipo">
+                                <option value="sencilla">Sencilla</option>
+                                <option value="doble">Doble</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </div>
+                         <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <select id="estado" name="estado">
+                                <option value="disponible">Disponible</option>
+                                <option value="ocupada">Ocupada</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="action-buttons">
+                            <button type="submit" class="btn btn-primary">Agregar</button>
+                            <button type="button" class="btn">Actualizar</button>
+                            <button type="button" class="btn">Eliminar</button>
+                            <button type="reset" class="btn">Limpiar</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row search-bar-row">
+                         <div class="search-bar">
+                            <input type="text" placeholder="Buscar por número...">
+                            <button type="button" class="btn">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="content-box">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Número</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>101</td>
+                                <td>Sencilla</td>
+                                <td><span class="status available">Disponible</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>2</td>
+                                <td>201</td>
+                                <td>Doble</td>
+                                <td><span class="status occupied">Ocupada</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>3</td>
+                                <td>301</td>
+                                <td>Suite</td>
+                                <td><span class="status maintenance">Mantenimiento</span></td>
+                                <td class="actions-cell">
+                                    <button class="action-btn edit-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="action-btn delete-btn"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Css/habitaciones.css */
+/* Estilos específicos para la página de Gestión de Habitaciones */
+
+.main-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.content-box {
+    background-color: #fdfdfa;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* Formulario */
+.room-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end; /* Alinea los elementos en la parte inferior */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.room-form .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-principal);
+    min-width: 150px; /* Ancho mínimo para los campos */
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: all 0.2s ease;
+}
+.btn:hover { background-color: #e9e9e9; }
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    border-color: var(--color-principal);
+}
+.btn-primary:hover { background-color: #061a30; }
+
+
+/* Barra de búsqueda */
+.search-bar-row {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex-grow: 1; /* El input ocupa el espacio disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Tabla de habitaciones */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para los estados de las habitaciones */
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+}
+.status.available { background-color: #2ecc71; } /* Verde */
+.status.occupied { background-color: #e74c3c; } /* Rojo */
+.status.maintenance { background-color: #f39c12; } /* Naranja */
+
+
+/* Botones de acción en la tabla */
+.actions-cell {
+    white-space: nowrap;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 0 5px;
+}
+.edit-btn { color: #3498db; }
+.delete-btn { color: #e74c3c; }
+
+/* Estilo para el enlace activo en el menú lateral */
+.main-nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+}

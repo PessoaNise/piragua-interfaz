@@ -1,0 +1,47 @@
+
+:root {
+    --color-fondo: #F0EAD6;     
+    --color-principal: #0A2342; 
+    --font-principal: 'Lora', serif; 
+}
+
+
+body {
+    margin: 0; 
+    font-family: var(--font-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+}
+
+
+.btn {
+    display: inline-block; 
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: all 0.2s ease;
+    text-decoration: none; 
+    color: var(--color-principal); 
+    margin: 5px; 
+}
+
+.btn:hover { 
+    background-color: #e9e9e9; 
+    border-color: #999;
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    border-color: var(--color-principal);
+}
+
+.btn-primary:hover { 
+    background-color: #061a30; 
+    border-color: #061a30;
+    color: var(--color-fondo);
+}
